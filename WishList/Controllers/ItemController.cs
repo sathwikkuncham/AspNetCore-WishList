@@ -18,8 +18,8 @@ namespace WishList.Controllers
         }
         public IActionResult Index()
         {
-            var ItemsList = _context.Items.ToList();
-            return base.View("Index", ItemsList);
+            List<Item> ItemsList = _context.Items.ToList();
+            return View("Index", ItemsList);
         }
         [HttpGet]
         public IActionResult Create()
